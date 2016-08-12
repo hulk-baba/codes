@@ -1,0 +1,999 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="description" content="
+HackerEarth helps connect smart programmers and great companies. Take up online programming challenges, get hired! Compete against the best programmers!
+" >
+        <link rel="canonical" href="https://code.hackerearth.com/4d2e43o" />
+        <meta name="msvalidate.01" content="1BF418E510B5A17A2D71685C571BF4EB" />
+
+        <!-- Errorception tracking snippet -->
+        <script>
+            (function(_,e,rr,s){_errs=[s];var c=_.onerror;_.onerror=function(){var a=arguments;_errs.push(a);
+            c&&c.apply(this,a)};var b=function(){var c=e.createElement(rr),b=e.getElementsByTagName(rr)[0];
+            c.src="//beacon.errorception.com/"+s+".js";c.async=!0;b.parentNode.insertBefore(c,b)};
+            _.addEventListener?_.addEventListener("load",b,!1):_.attachEvent("onload",b)})
+            (window,document,"script","55ba39a81acd32ac7d0002d4");
+        </script>
+
+        <!-- MathJax -->
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({messageStyle: "none",
+                tex2jax: {
+                    inlineMath: [['$$','$$']],
+                    displayMath: [['$$$', '$$$']],
+                    preview: "none"
+            }
+        });
+        </script>
+        <script type="text/javascript" async
+            src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML">
+        </script>
+        <script type="text/javascript" src = "https://hackerearth.global.ssl.fastly.net/static/js/mathjax.js"></script>
+
+        <script type="text/javascript">
+            window.addEventListener("load", function() {
+                        MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+                    });
+        </script>
+
+        
+
+        <title>  
+Online Compiler/Interpreter | Codetable
+ | HackerEarth  </title>
+
+        
+        
+        
+        <link rel="shortcut icon" href="https://hackerearth.global.ssl.fastly.net/static/hackerearth/images/logo/HE_identity.png" type="image/x-icon">
+        
+        
+        <link rel="stylesheet" href="https://hackerearth.global.ssl.fastly.net/static/base/base_common_combined.css?v=15.6">
+        <link rel="stylesheet" href="https://hackerearth.global.ssl.fastly.net/static/js/tooltip/tipTip.css?v=0.2">
+        <link rel="stylesheet" href="https://hackerearth.global.ssl.fastly.net/static/offline/offline-theme-slide.css?v=0.2"/>
+        <link rel="stylesheet" type="text/css" href="https://hackerearth.global.ssl.fastly.net/static/thirdparty/jquery.mCustomScrollbar.min.css?v=0.2">
+        <!--<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">-->
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+        <link href='//fonts.googleapis.com/css?family=Bitter:400,700,400italic' rel='stylesheet' type='text/css'>
+        <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+        
+
+        
+<link rel="stylesheet" href="https://hackerearth.global.ssl.fastly.net/static/codetable/base_codetable.css?v=0.3">
+
+
+        <!-- For chartbeat -->
+        <script type="text/javascript">var _sf_startpt=(new Date()).getTime();</script>
+
+        <!-- Make the static variable available for all js files -->
+        <script>
+            var STATIC_URL = "https://hackerearth.global.ssl.fastly.net/static/";
+        </script>
+
+        <!-- Store CSRF_COOKIE -->
+        <script>
+            var CSRF_COOKIE_USED = "True";
+            var CSRF_COOKIE = "Zciuw2SJUPgXdDhf4B7bt0bbNoG4NtKX";
+        </script>
+
+        
+    
+        <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-35414030-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+        </script>
+
+    <link href="https://hackerearth.global.ssl.fastly.net/static/css/custom-theme/jquery-ui-1.8.21.custom.css?v=0.2" media="screen" rel="stylesheet" type="text/css" />
+    <link href="https://hackerearth.global.ssl.fastly.net/static/css/bootstrap.css?v=0.2" media="screen" rel="stylesheet" type="text/css" />
+    <link href="https://hackerearth.global.ssl.fastly.net/static/codetable/banner.css?v=0.2" media="screen" rel="stylesheet" type="text/css" />
+
+
+    </head>
+
+    <body>
+
+        <!-- Placeholder for any error message on the site -->
+        
+        <div id="alert-message-holder">
+            
+
+            <!-- put a dummy message box so that it can be used when cloning
+                 and adding more -->
+            <div class="alert-message hidden">
+                <div class="message float-left"></div>
+                <div class="cross-holder float-left"><span class="small-cross sprites"></span></div>
+                <div class="clear"></div>
+            </div>
+        </div> <!-- end alert-message-holder -->
+        
+
+        
+    <!-- Placeholder for any error message on the site -->
+    <div id="alert-message-holder">
+        
+
+        <!-- put a dummy message box so that it can be used when cloning
+             and adding more -->
+        <div class="alert-message hidden">
+            <div class="message float-left"></div>
+            <div class="cross-holder float-left"><span class="small-cross sprites"></span></div>
+            <div class="clear"></div>
+        </div>
+    </div> <!-- end alert-message-holder -->
+    
+        <div class="header">
+            <div class="navigation">
+                <div class="float-left">
+                    <a href="/" class="logo-codetable no-underline float-left">
+                        <img src="https://hackerearth.global.ssl.fastly.net/static/codetable/images/codetable-logo.png"/>
+                    </a>
+                    <div class="clear"></div>
+                </div>
+
+                <ul class="nav-bar no-padding float-right">
+                    <li><a href="/">New Code</a></li>
+                    <li><a href="https://github.com/HackerEarth/hackerearth.vim" target="_blank">Vim Plugin</a></li>
+                    <li><a href="/api/register/" target="_blank">API</a></li>
+
+                     
+                     <li id="user-name" expand="logout-box" class="nav-bar-menu nav-menu"><a href="/users/profile/"><img src="https://d320jcjashajb2.cloudfront.net/media/avatars/hulk_baba/resized/30/13489709" alt="hulk_baba" width="30" height="30" onerror="if(typeof handle_avatar_error=='function'){handle_avatar_error(this);}" /></span></a></li>
+                     
+                 </ul>
+                 <div class="clear"></div>
+            </div> <!-- navigation -->
+            <div class="ajax-loader"></div>
+        </div> <!-- header -->
+    
+    <!-- This is the center page which has a fixed width of 1100px -->
+    
+<div class="bl-page">
+    <div class="filename-bar">
+        <div id="file-name" class="filename float-left" title="Click to rename">
+        </div>
+        <div class="filename-text float-left hidden">
+            <form>
+                <div class="floating-wrapper">
+                    <input type="text" name="filename" value=""/>
+                    <button type="button" class="filename-save button btn-blue medium-margin-left">Save</button>
+                    <a class="filename-cancel link-3 medium-margin-left link-near-button">Cancel</a>
+                </div>
+            </form>
+        </div>
+        
+        
+        
+
+        <div class="float-right">
+            <a href="/download/4d2e43o"><i title="download" class="fa fa-download top-icons"></i></a>
+        </div>
+
+        <div class="float-right clone-div">
+            <div class="btn-clone float-left" onclick="clone('4d2e43o');return false">Clone</div>
+            <div class="count-clone float-left" title="Clone count"></div>
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+    <hr class="hr">
+    <div class="left">
+        <div class="editor-container">
+            <div class="editor-extras">
+                <div class="float-left select-lang">
+                    <select name="lang" id="lang">
+                        
+                            
+                                <option value=PASCAL>Pascal (fpc 2.6.2)</option>
+                            
+                        
+                            
+                                <option value=JAVASCRIPT_NODE>JavaScript (Node.js 0.10.25)</option>
+                            
+                        
+                            
+                                <option value=CPP>C++ (g++ 4.8.4)</option>
+                            
+                        
+                            
+                                <option value=PHP>PHP (php 5.5.9)</option>
+                            
+                        
+                            
+                                <option value=HTML>HTML</option>
+                            
+                        
+                            
+                                <option value=LUA>Lua (lua 5.3.2)</option>
+                            
+                        
+                            
+                                <option value=LISP>Lisp (csc 4.8.0.5)</option>
+                            
+                        
+                            
+                                <option value=GO>Go (go 1.4.2)</option>
+                            
+                        
+                            
+                                <option value=PYTHON>Python (python 2.7.6)</option>
+                            
+                        
+                            
+                                <option value=SCALA>Scala (scalac 2.9.2)</option>
+                            
+                        
+                            
+                                <option value=OBJECTIVEC>Objective-C (clang 3.3)</option>
+                            
+                        
+                            
+                                <option value=OCTAVE>Octave (gnu octave 4.0.0)</option>
+                            
+                        
+                            
+                                <option value=RACKET>Racket (racket 6.5)</option>
+                            
+                        
+                            
+                                <option value=JAVA>Java (openjdk 1.7.0_09)</option>
+                            
+                        
+                            
+                                <option value=PERL>Perl (perl 5.18.2)</option>
+                            
+                        
+                            
+                                <option value=JAVASCRIPT>JavaScript (Rhino 1.7)</option>
+                            
+                        
+                            
+                                <option value=RUST>Rust (rustc 1.4.0)</option>
+                            
+                        
+                            
+                                <option value=FSHARP>F# (fsharp 4.0)</option>
+                            
+                        
+                            
+                                <option value=R>R (RScript 3.0.2)</option>
+                            
+                        
+                            
+                                <option value=CSHARP>C# (mono 3.2.8)</option>
+                            
+                        
+                            
+                                <option value=CLOJURE>Clojure (clojure 1.4.0)</option>
+                            
+                        
+                            
+                                <option value=HASKELL>Haskell (ghc 7.6.3)</option>
+                            
+                        
+                            
+                                <option value=RUBY>Ruby (ruby 2.1.1)</option>
+                            
+                        
+                            
+                                <option value=C selected="selected">C (gcc 4.8.4)</option>
+                            
+                        
+                            
+                                <option value=SWIFT>Swift (swift 2.2)</option>
+                            
+                        
+                            
+                                <option value=LISP_SBCL>Lisp (sbcl 1.3.1)</option>
+                            
+                        
+                            
+                                <option value=CSS>CSS</option>
+                            
+                        
+                            
+                                <option value=TEXTFILE>Text</option>
+                            
+                        
+                            
+                                <option value=GROOVY>Groovy (groovy 2.4.5)</option>
+                            
+                        
+                    </select>
+                </div><!-- select-lang-->
+                
+                <div class="clear"></div>
+            </div><!-- editor-extras -->
+            <div id="editor"></div>
+        </div><!-- editor-container -->
+        <div class="test-input-check medium-margin">
+            <input name="test-input-checkbox" id="test-input-checkbox" type="checkbox">
+            <span class="test-input-checkbox-text body-font light">Use custom input for testing your code</span>
+            <div class="test-input-container medium-margin hidden">
+                <textarea id="test-input" class="nice-textarea">
+                </textarea>
+            </div>
+            <hr class="hr">
+        </div><!-- test-input-check-->
+        <div class="compile-and-test">
+            <div class="float-right medium-margin-left">
+                <button type="button" id="run-code" class="button btn-green" onclick="run('4d2e43o');">Compile and Run</button>
+            </div>
+            <div class="clear"></div>
+        </div> <!-- compile and test -->
+        <div class="dots-loader"></div>
+        <div id="run-result" class="medium-margin body-font">
+            <div class="error-output"></div>
+            <div class="output hidden" id="output">
+            </div>
+        </div>
+    </div><!-- left -->
+    <div class="right">
+        <div class="activity-status medium-margin">
+            <div class="right-panel-heading">
+                Activity Status
+            </div>
+            <hr class="hr">
+            <div class="activity-graph">
+            </div>
+            <div class="code-run-count">
+                <span class="code-run-count-msg"></span>
+                <span class="code-run-count-value less-margin-left dark"></span>
+            </div>
+            <div class="time-and-date">
+                <div class="date-created">
+                    <span class="date-created-msg"></span>
+                    <span class="date-created-value dark"></span>
+                </div>
+                <div class="date-last-saved">
+                    <span class="date-last-saved-msg"></span>
+                    <span class="date-last-saved-value less-margin-left dark"></span>
+                </div>
+            </div>
+        </div>
+        <div class="share-url standard-margin">
+            <div class="right-panel-heading">
+                Share URL
+            </div>
+            <hr class="hr">
+            <div class="read-only float-left">
+                <input type="checkbox" name="read-only" value="read-only">
+                <div class="read-only-text">Read only URL</div>
+            </div>
+            <div class="read-write float-left">
+                <input type="checkbox" name="read-write" value="read-write">
+                <div class="read-write-text">Read &amp; Write URL</div>
+            </div>
+            <div class="clear"></div>
+            <div class="generate-public-url button btn-gray float-left" onclick="share('4d2e43o');return false;"> Generate Public url </div>
+            <div class="clear"></div>
+            <div class="result">
+                <div class="result-read-only less-margin-2">
+                    <span class="hidden result-read-only-msg">Read Only: </span>
+                    <a href="" target="_blank" class="result-read-only-url"></a>
+                </div>
+                <div class="result-read-write less-margin-2">
+                    <span class="hidden result-read-write-msg">Read write: </span>
+                    <a href="" target="_blank" class="result-read-write-url"></a>
+                </div>
+            </div>
+            <div class="share-url-error-msg less-margin-bottom">
+                Choose URL preference
+            </div>
+        </div>
+        <div class="code-video standard-margin">
+            <div class="right-panel-heading">
+                Code Video
+            </div>
+            <hr class="hr">
+            <div class="align-center">
+                <!-- inline style in next line is used in editor.js -->
+                <a href="" target="_blank" class="code-video-url" style="display: none"><img class="video-thumbnail" src="https://hackerearth.global.ssl.fastly.net/static/codetable/images/videoThumbnail.jpg"/></a>
+            </div>
+            <div class="code-video-error-msg light">
+            </div>
+        </div>
+
+        <!--
+        <div class="social-share standard-margin">
+            <div class="fb-like nav-bar float-left medium-margin-right" data-href="https://code.hackerearth.com/4d2e43o" data-send="true" data-layout="button_count" data-width="300" data-show-faces="false" data-colorscheme="light"></div>
+            <a href="https://twitter.com/share" class="twitter-share-button float-left" data-url="https://code.hackerearth.com/4d2e43o" data-text="" data-via="CodeTable">Tweet</a>
+            <div class="clear-both"></div>
+        </div>
+        -->
+    </div> <!-- right -->
+    <div class="clear"></div>
+</div><!--page-->
+
+
+    
+    <div class="footer">
+        <ul class="footer-bar no-padding">
+            <li>
+            &copy; <a href="https://www.hackerearth.com" target="_blank" class="underline-hover">HackerEarth 2016</a>
+            <span class="separator">|</span>
+            </li>
+            <li>
+                <a href="https://www.hackerearth.com/docs/api/developers/code/legacy/" target="_blank" class="underline-hover"> API</a>
+                <span class="separator">|</span>
+            </li>
+            <li>
+                <a href="https://github.com/HackerEarth/hackerearth.vim" target="_blank" class="underline-hover">Vim Plugin</a>
+                <span class="separator">|</span>
+            </li>
+            <li>
+                <a href="/aboutus" target="_blank" class="underline-hover">About</a>
+                <span class="separator">|</span>
+            </li>
+            <li> <a href="mailto:vivek@hackerearth.com"
+                        class="underline-hover" target="_blank">Contact</a> </li>
+        </ul>
+                <div class="social-buttons float-right">
+                    <div class="fb-like nav-bar float-left less-margin-right" data-href="https://www.facebook.com/HackerEarth" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false" data-colorscheme="light"></div>
+                    <div class="google-plus float-left" style="width:70px !important;"><g:plusone size="medium" href="http://code.hackerearth.com"></g:plusone></div>
+                    <div class="float-left" style="width:100px !important;"><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.codetable.org" data-text="CodeTable@HackerEarth - online compiler/interpreter. code sharing was never so easy!" data-via="HackerEarth">Tweet</a></div>
+                    <a href="https://twitter.com/HackerEarth" class="twitter-follow-button" data-show-count="false">Follow @HackerEarth</a>
+                    <div class="clear"></div>
+                </div>
+                <div class="clear"></div>
+    </div>
+    
+    <div id="code-video-type" class="hidden">ctable</div>
+    <div id="code-player-url" class="hidden">/code/play//</div>
+    <div id="http-host" class="hidden">https://node-codetable.hackerearth.com</div>
+
+            <!-- realtime host -->
+            <div id="realtime-host" class="hidden">realtime.hackerearth.com</div>
+            <!-- realtime port -->
+            <div id="realtime-port" class="hidden">80</div>
+
+            <div id="login-window" class="loginModal">
+                <div>
+                <a href="#close" title="Close" class="closeWindow">X</a>
+                <h2><center>Login to CodeTable</center></h2>
+                
+
+<style>
+.social-login {
+  margin-left: 70px
+  margin-top: 40px;
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.social-login ul {
+  list-style-type: none;
+}
+.social-login li {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  height: 29px;
+}
+.social-login li .text {
+  padding: 0 9px;
+  line-height: 29px;
+  float: left;
+  display: block;
+}
+.social-login li .image {
+  margin: 2px 0 0 7px;
+  padding-left: 5px;
+  float: left;
+  display: block;
+  width: 18px;
+  height: 26px;
+  background-image: url("https://hackerearth.global.ssl.fastly.net/static/hackathon/images/social.png") ;
+}
+.social-login li .divider {
+  float: left;
+  display: block;
+}
+.social-login a {
+  color: #fff;
+  text-decoration: none;
+  padding: 5px;
+}
+.social-login .twitter {
+  background: -moz-linear-gradient(top, #49c4f9, #2da4d9);
+  background: -webkit-linear-gradient(top, #49c4f9, #2da4d9);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#49c4f9, endColorstr=#2da4d9);
+}
+.social-login .twitter .text {
+  border-left: 1px solid #0b7fb3;
+}
+.social-login .twitter .image {
+  background-position: -3px;
+  border-right: 1px solid #5dcdfb;
+}
+.social-login .github {
+  background: -moz-linear-gradient(top, #49c4f9, #2da4d9);
+  background: -webkit-linear-gradient(top, #49c4f9, #2da4d9);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#49c4f9, endColorstr=#2da4d9);
+}
+.social-login .github .image {
+  background: none;
+  border-right: 1px solid #5dcdfb;
+  background-position: center;
+  padding-left: 1px !important;
+  padding-right: 4px !important;
+}
+.social-login .github .image span {
+  background: url("https://hackerearth.global.ssl.fastly.net/static/hackathon/images/github-icon.png") no-repeat !important;
+  width: 16px;
+  display: block;
+  height: 16px;
+  margin-top: 4px;
+  margin-right: 5px;
+}
+.social-login .github .text {
+  border-left: 1px solid #0b7fb3;
+}
+.social-login .google {
+  background: -moz-linear-gradient(top, #67ade9, #4598d6);
+  background: -webkit-linear-gradient(top, #67ade9, #4598d6);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#67ade9, endColorstr=#4598d6);
+}
+.social-login .google .text {
+  border-left: 1px solid #91b5d3;
+}
+.social-login .google .image {
+  background-position: 23px;
+  border-right: 1px solid #367fbc;
+}
+.social-login .facebook {
+  background: -moz-linear-gradient(top, #6884b4, #496493);
+  background: -webkit-linear-gradient(top, #6884b4, #496493);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#6884b4, endColorstr=#496493);
+}
+.social-login .facebook .text {
+  border-left: 1px solid #91abd7;
+}
+.social-login .facebook .image {
+  background-position: 42px;
+  border-right: 1px solid #1f3b6f b;
+}
+</style>
+
+
+<div class="social-login">
+    
+    <ul class="no-padding">
+        
+        <a href='/accounts/facebook/login/?next=%2Fsocial-login-complete%2F%3Forigin_protocol%3Dhttps%26origin_host%3Dcode.hackerearth.com%26popup_login%3Ddisabled%26redirect%3D/4d2e43o&update=facebook&source=codetable'>
+            <li class="facebook">
+                <span class="image"></span>
+                <span class="divider"></span> <span class="text"> Sign in with Facebook </span>
+            </li>
+        </a>
+        <a href='/accounts/google/login/?next=%2Fsocial-login-complete%2F%3Forigin_protocol%3Dhttps%26origin_host%3Dcode.hackerearth.com%26popup_login%3Ddisabled%26redirect%3D/4d2e43o&update=google&source=codetable'>
+            <li class="google">
+                <span class="image"></span>
+                <span class="divider"></span>
+                <span class="text"> Sign in with Google </span>
+            </li>
+        </a>
+    </ul>
+    
+    <div class="clear-both"> </div>
+</div>
+
+            </div>
+        </div> <!-- end page -->
+        <div class="expand-box" id="logout-box">
+            <div class="down-arrow"></div>
+            <ul class="no-margin">
+                <a href="/users/profile/"><li>Profile</li></a>
+                <a href="/accounts/logout/?next=/"><li>Logout</li></a>
+            </ul>
+        </div>
+        <!-- facebook include -->
+        <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=190817380995032";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+        <!-- end of facebook include -->
+
+        <!-- twitter include -->
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+        <!-- end of twitter include -->
+        <!-- google+ button -->
+        <script>
+            (function() {
+                var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                po.src = 'https://apis.google.com/js/plusone.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+            })();
+        </script>
+
+
+        <!-- for adding extra html to the body, generally if you want to add absolute position that appear on click
+             then add them in this block. Please make sure that this block is not already being filled by the parent
+             template, if that is the case then to block.super after extending this block -->
+        
+        
+        
+
+        <!-- Store any json returned for bigpipe -->
+        <div id="bigpipe-json" class="hidden">
+            
+        </div>
+
+        <!-- Store any json returned for bigpipe -->
+        <div id="user-prompt-json" class="hidden">
+            {}
+        </div>
+
+        <!-- realtime host -->
+        <div id="realtime-host" class="hidden">realtime.hackerearth.com</div>
+        <!-- realtime port -->
+        <div id="realtime-port" class="hidden">80</div>
+
+        <!-- client name for updating parts of page in realtime -->
+        <div id="pusher-channel-name-0" class="hidden">40affbe316b8341e8a0346e15756a20533842290</div>
+        
+        
+        <div id="pusher-channel-name-1" class="hidden" realtime="true">private-c0f5b066a9c938ef4c029318ae9c5459726286c8</div>
+        <div id="pusher-channel-name-2" class="hidden">private-4a6747eab1a6d7043095a55d7515a4b413576e50</div>
+        
+        
+
+        
+            <div id="common-notification">
+            </div>
+        
+        <!-- pusher app key -->
+        <div id="pusher-app-key" class="hidden">58a29e5cae2309f04b28</div>
+
+        <!-- ping url for user presence -->
+        <div id="ghost-ping-url" class="hidden" ajax="/ghost/ping/"></div>
+
+        
+        
+
+        <!-- All the scripts go here -->
+        <script>
+            var CURRENT_PATH = "https://code.hackerearth.com/4d2e43o";
+            var HISTORY = '';
+        </script>
+
+        
+        <!-- alljs: static_media/js/jquery-1.7.min.patched.js static_media/js/jquery.color.js static_media/js/jquery.elastic.js static_media/js/ajaxSend.js  static_media/js/jquery.inview.js  static_media/js/tooltip/jquery.tipTip.modified.js  static_media/offline/offline.min.js  static_media/js/watermark.min.js  static_media/history.js?v=0.1/scripts/bundled/html4html5/jquery.history.js  static_media/js/jquery.nicescroll.js  static_media/simplemodal/simplemodal.js static_media/js/jquery.sticky.js static_media/js/pusher.min.js static_media/js/ifvisible.min.js static_media/ghost/ghost.js static_media/feeds/feeds.js static_media/base/progress_bar.js -->
+        <script type='text/javascript' src="https://hackerearth.global.ssl.fastly.net/static/js/alljs.js?v=2.9" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="https://hackerearth.global.ssl.fastly.net/static/thirdparty/jquery.mCustomScrollbar.concat.min.js?v=0.1" crossorigin="anonymous"></script>
+        <script type='text/javascript' src='https://hackerearth.global.ssl.fastly.net/static/base/base1.0.1.js?v=9.4' crossorigin="anonymous"></script>
+        <script type='text/javascript' src='https://hackerearth.global.ssl.fastly.net/static/bigpipe/bigpipe.js?v=0.6' crossorigin="anonymous"></script>
+        <script type='text/javascript' src='https://hackerearth.global.ssl.fastly.net/static/realtime/pusher_realtime.js?v=2.6' crossorigin="anonymous"></script>
+        <script type='text/javascript' src='https://hackerearth.global.ssl.fastly.net/static/user_prompts/userprompt.js?v=0.5' crossorigin="anonymous"></script>
+        <script type='text/javascript' src="https://hackerearth.global.ssl.fastly.net/static/search/search.1.0.js?v=0.1" crossorigin="anonymous"></script>
+        <script type='text/javascript' src='https://hackerearth.global.ssl.fastly.net/static/base/history.js?v=0.2' crossorigin="anonymous"></script>
+        <script type='text/javascript' src='https://hackerearth.global.ssl.fastly.net/static/js/commentUtils.js?v=0.1' crossorigin="anonymous"></script>
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+        <script src="https://hackerearth.global.ssl.fastly.net/static/offline/offline.min.js?v=0.1" crossorigin="anonymous"></script>
+
+        
+        <script>
+            Offline.options = {
+                interceptRequests: false,
+                requests: false,
+            };
+        </script>
+
+        <script>
+            // do all maps stuff here
+            function initializeMaps(){
+
+                // Call other map functions
+                try{
+                    window.mapStuff();
+                } catch(err){
+                }
+
+                try{
+                    // Display footer maps
+                    var myOptions = {
+                        zoom:14,
+                        center:new google.maps.LatLng(12.9337468, 77.6149422),
+                        mapTypeId: google.maps.MapTypeId.ROADMAP
+                    };
+                    var map = new google.maps.Map(document.getElementById("gmap_canvas"), myOptions);
+                    var marker = new google.maps.Marker({
+                                map: map,
+                                position: new google.maps.LatLng(12.9337468, 77.6149422)
+                            });
+                    var infowindow = new google.maps.InfoWindow({
+                                    content:"<b>HackerEarth Technologies</b>"
+                                });
+                    google.maps.event.addListener(marker, "click", function(){
+                            infowindow.open(map,marker);
+                    });
+
+                }
+                catch(e){}
+            }
+
+            function loadMaps() {
+                var script = document.createElement('script');
+                script.type = 'text/javascript';
+                script.src = 'https://maps.googleapis.com/maps/api/js?sensor=false&libraries=places&callback=initializeMaps'
+                document.body.appendChild(script);
+            }
+
+            $(document).ready(function(){
+                loadMaps();
+            });
+
+        </script>
+        
+
+        <script>
+            // Used in search
+            var is_user_logged_in = true;
+        </script>
+
+        <script type="text/javascript" src="https://hackerearth.global.ssl.fastly.net/static/js/detect_timezone.js?v=0.1" crossorigin="anonymous"></script>
+        <script>
+
+            function setTimezoneCookie(detected_user_tz) {
+                /* Sets the detected user timezone as a cookie in the browser.
+                   If someone changes it or removes it, a sanity check is
+                   performed and the cookie is reset.
+
+                   This cookie is set for ready availability of user timezone
+                   in the backend.
+                */
+
+                const USER_TIMEZONE_COOKIE = 'user_tz';
+                // Try to get the existing user timezone cookie stored
+                // in the browser.
+                user_tz = readCookie(USER_TIMEZONE_COOKIE);
+
+                // Flag to determine whether a new cookie has to be created.
+                create_cookie = false;
+
+                if(user_tz) {
+                    if(user_tz !== detected_user_tz) {
+                        // If someone has changed the cookie in some way, we
+                        // set a new cookie.
+                        eraseCookie(USER_TIMEZONE_COOKIE);
+                        create_cookie = true;
+                    }
+                } else {
+                    create_cookie = true;
+                }
+
+                // Create a new cookie if create_cookie flag is set.
+                createCookie(USER_TIMEZONE_COOKIE, detected_user_tz, 1);
+
+            }
+            $(document).ready(function(){
+                var timezone = jstz.determine_timezone(); // Now you have an instance of the TimeZone object.
+                // Set as a cookie in browser for easy access in backend.
+                setTimezoneCookie(timezone.name());
+
+                // Set as a js variable for easy access across frontend.
+                USER_TIMEZONE = timezone.name()
+
+                
+                
+                
+
+                
+                    var profile_timezone = "Asia/Kolkata";
+                    if (timezone.name() !== profile_timezone) {
+                        $.ajax({
+                            type: "POST",
+                            url:"/users/AJAX/set-timezone/",
+                            data: {
+                            'timezone': timezone.name(),
+                            },
+                        });
+                    }
+                
+
+                
+            });
+        </script>
+
+        
+            
+
+            
+            
+        
+
+        <script type="text/javascript">
+            
+        </script>
+
+        
+    
+        <script type='text/javascript' src="https://hackerearth.global.ssl.fastly.net/static/codetable/base_codetable.js?v=0.1" crossorigin="anonymous"></script>
+
+    <script src='https://hackerearth.global.ssl.fastly.net/static/js/ajaxSend.js?v=0.1' type='text/javascript' crossorigin="anonymous"></script>
+    <script src="https://hackerearth.global.ssl.fastly.net/static/code_editor/ace-builds/src/ace.js?v=0.2" type="text/javascript" charset="utf-8" crossorigin="anonymous"></script>
+    <script src="https://hackerearth.global.ssl.fastly.net/static/code_editor/ace-plugins/mode-all.js?v=0.6" type="text/javascript" charset="utf-8" crossorigin="anonymous"></script>
+    <script src="https://hackerearth.global.ssl.fastly.net/static/code_editor/ace-plugins/plugins.js?v=0.3" type="text/javascript" charset="utf-8" crossorigin="anonymous"></script>
+    <script src="https://hackerearth.global.ssl.fastly.net/static/code_editor/ace-builds/src/ext-language_tools.js?v=0.2" type="text/javascript" charset="utf-8" crossorigin="anonymous"></script>
+    <script src="https://hackerearth.global.ssl.fastly.net/static/code_editor/ace-autocomplete/auto-all.js?v=0.3" type="text/javascript" charset="utf-8" crossorigin="anonymous"></script>
+    <script src="https://hackerearth.global.ssl.fastly.net/static/code_player/controller.js?v=1.0" type="text/javascript" charset="utf-8" crossorigin="anonymous"></script>
+    <script src="https://hackerearth.global.ssl.fastly.net/static/code_player/util.js?v=4.0" type="text/javascript" charset="utf-8" crossorigin="anonymous"></script>
+    <script src="https://hackerearth.global.ssl.fastly.net/static/code_player/code_player_v2.js?v=5.1" type="text/javascript" charset="utf-8" crossorigin="anonymous"></script>
+    <script src="https://hackerearth.global.ssl.fastly.net/static/codetable/editor.1.1.js?v=0.9" type="text/javascript" charset="utf-8" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://hackerearth.global.ssl.fastly.net/static/js/jquery-ui-1.8.16.custom.min.js?v=0.1" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://hackerearth.global.ssl.fastly.net/static/js/jquery.elastic.js?v=0.1" crossorigin="anonymous"></script>
+    <script src="https://hackerearth.global.ssl.fastly.net/static/js/bootstrap-modal.js?v=0.1" type="text/javascript" charset="utf-8" crossorigin="anonymous"></script>
+
+    <!-- load themes -->
+    <script src="https://hackerearth.global.ssl.fastly.net/static/code_editor/ace-builds/src/theme-twilight.js?v=0.1?v=0.1" type="text/javascript" charset="utf-8" crossorigin="anonymous"></script>
+    <script src="https://hackerearth.global.ssl.fastly.net/static/code_editor/ace-builds/src/theme-clouds.js?v=0.1" type="text/javascript" charset="utf-8" crossorigin="anonymous"></script>
+    <script src="https://hackerearth.global.ssl.fastly.net/static/code_editor/ace-builds/src/theme-clouds_midnight.js?v=0.1" type="text/javascript" charset="utf-8" crossorigin="anonymous"></script>
+    <script src="https://hackerearth.global.ssl.fastly.net/static/code_editor/ace-builds/src/theme-cobalt.js?v=0.1" type="text/javascript" charset="utf-8" crossorigin="anonymous"></script>
+    <script src="https://hackerearth.global.ssl.fastly.net/static/code_editor/ace-builds/src/theme-crimson_editor.js?v=0.3" type="text/javascript" charset="utf-8" crossorigin="anonymous"></script>
+    <script src="https://hackerearth.global.ssl.fastly.net/static/code_editor/ace-builds/src/theme-dawn.js?v=0.1" type="text/javascript" charset="utf-8" crossorigin="anonymous"></script>
+    <script src="https://hackerearth.global.ssl.fastly.net/static/code_editor/ace-builds/src/theme-eclipse.js?v=0.1" type="text/javascript" charset="utf-8" crossorigin="anonymous"></script>
+    <script src="https://hackerearth.global.ssl.fastly.net/static/code_editor/ace-builds/src/theme-idle_fingers.js?v=0.1" type="text/javascript" charset="utf-8" crossorigin="anonymous"></script>
+    <script src="https://hackerearth.global.ssl.fastly.net/static/code_editor/ace-builds/src/theme-kr_theme.js?v=0.1" type="text/javascript" charset="utf-8" crossorigin="anonymous"></script>
+    <script src="https://hackerearth.global.ssl.fastly.net/static/code_editor/ace-builds/src/theme-merbivore.js?v=0.1" type="text/javascript" charset="utf-8" crossorigin="anonymous"></script>
+    <script src="https://hackerearth.global.ssl.fastly.net/static/code_editor/ace-builds/src/theme-merbivore_soft.js?v=0.1" type="text/javascript" charset="utf-8" crossorigin="anonymous"></script>
+    <script src="https://hackerearth.global.ssl.fastly.net/static/code_editor/ace-builds/src/theme-mono_industrial.js?v=0.1" type="text/javascript" charset="utf-8" crossorigin="anonymous"></script>
+    <script src="https://hackerearth.global.ssl.fastly.net/static/code_editor/ace-builds/src/theme-monokai.js?v=0.1" type="text/javascript" charset="utf-8" crossorigin="anonymous"></script>
+    <script src="https://hackerearth.global.ssl.fastly.net/static/code_editor/ace-builds/src/theme-pastel_on_dark.js?v=0.1" type="text/javascript" charset="utf-8" crossorigin="anonymous"></script>
+    <script src="https://hackerearth.global.ssl.fastly.net/static/code_editor/ace-builds/src/theme-solarized_dark.js?v=0.1" type="text/javascript" charset="utf-8" crossorigin="anonymous"></script>
+    <script src="https://hackerearth.global.ssl.fastly.net/static/code_editor/ace-builds/src/theme-solarized_light.js?v=0.1" type="text/javascript" charset="utf-8" crossorigin="anonymous"></script>
+    <script src="https://hackerearth.global.ssl.fastly.net/static/code_editor/ace-builds/src/theme-textmate.js?v=0.1" type="text/javascript" charset="utf-8" crossorigin="anonymous"></script>
+    <script src="https://hackerearth.global.ssl.fastly.net/static/code_editor/ace-builds/src/theme-tomorrow.js?v=0.1" type="text/javascript" charset="utf-8" crossorigin="anonymous"></script>
+    <script src="https://hackerearth.global.ssl.fastly.net/static/code_editor/ace-builds/src/theme-tomorrow_night_blue.js?v=0.1" type="text/javascript" charset="utf-8" crossorigin="anonymous"></script>
+    <script src="https://hackerearth.global.ssl.fastly.net/static/code_editor/ace-builds/src/theme-tomorrow_night_bright.js?v=0.1" type="text/javascript" charset="utf-8" crossorigin="anonymous"></script>
+    <script src="https://hackerearth.global.ssl.fastly.net/static/code_editor/ace-builds/src/theme-tomorrow_night_eighties.js?v=0.1" type="text/javascript" charset="utf-8" crossorigin="anonymous"></script>
+    <script src="https://hackerearth.global.ssl.fastly.net/static/code_editor/ace-builds/src/theme-tomorrow_night.js?v=0.1" type="text/javascript" charset="utf-8" crossorigin="anonymous"></script>
+    <script src="https://hackerearth.global.ssl.fastly.net/static/code_editor/ace-builds/src/theme-twilight.js?v=0.1?v=0.1" type="text/javascript" charset="utf-8" crossorigin="anonymous"></script>
+    <script src="https://hackerearth.global.ssl.fastly.net/static/code_editor/ace-builds/src/theme-vibrant_ink.js?v=0.1" type="text/javascript" charset="utf-8" crossorigin="anonymous"></script>
+    <!-- themes loaded -->
+
+    <script src="https://node-codetable.hackerearth.com/channel/bcsocket.js"></script>
+    <script src="https://node-codetable.hackerearth.com/share/share.uncompressed.js"></script>
+    <script src="https://node-codetable.hackerearth.com/share/ace.js"></script>
+
+    <script>
+        load('4d2e43o');
+    </script>
+
+    <script type='text/javascript' src='https://hackerearth.global.ssl.fastly.net/static/js/watermark.min.js?v=0.1' crossorigin="anonymous"></script>
+
+    
+
+
+        
+        <!-- google analytics start -->
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-34729975-1', 'auto');
+            ga('require', 'displayfeatures');
+            
+            ga('set', '&uid', 405824);
+            
+            ga('send', 'pageview');
+        </script>
+        <!-- google analytics end -->
+        
+
+        
+        <!-- Google Code for Remarketing Tag -->
+        <!--
+        Remarketing tags may not be associated with personally identifiable information or placed on pages related to sensitive categories. See more information and instructions on how to setup the tag on: http://google.com/ads/remarketingsetup
+        -->
+        <script type="text/javascript">
+        /* <![CDATA[ */
+        var google_conversion_id = 961497631;
+        var google_custom_params = window.google_tag_params;
+        var google_remarketing_only = true;
+        /* ]]> */
+        </script>
+        <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+        </script>
+        <noscript>
+        <div style="display:inline;">
+        <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/961497631/?value=0&amp;guid=ON&amp;script=0"/>
+        </div>
+        </noscript>
+        
+
+        
+        <!-- mixpanel analytics start -->
+        <script type="text/javascript">(function(e,b){if(!b.__SV){var a,f,i,g;window.mixpanel=b;a=e.createElement("script");a.type="text/javascript";a.async=!0;a.src=("https:"===e.location.protocol?"https:":"http:")+'//cdn.mxpnl.com/libs/mixpanel-2.2.min.js';f=e.getElementsByTagName("script")[0];f.parentNode.insertBefore(a,f);b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.track_charge people.clear_charges people.delete_user".split(" ");for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2}})(document,window.mixpanel||[]);mixpanel.init("4c30b8635363027dfb780d5a61785112");</script>
+        <!-- mixpanel analytics end -->
+        <script type="text/javascript">
+            
+        </script>
+        
+
+        <div id="fb-root"></div>
+        <script>
+            <!-- facebook button -->
+            (function(d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s); js.id = id;
+                js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+
+            <!-- twitter button -->
+            !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+
+            <!-- google+ button -->
+            (function() {
+                var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                po.src = 'https://apis.google.com/js/plusone.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+            })();
+        </script>
+
+        
+        <script>
+        // Include the UserVoice JavaScript SDK (only needed once on a page)
+        UserVoice=window.UserVoice||[];(function(){var uv=document.createElement('script');uv.type='text/javascript';uv.async=true;uv.src='//widget.uservoice.com/5F90ycbP4JOg1fOUoELScA.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(uv,s)})();
+
+        //
+        // UserVoice Javascript SDK developer documentation:
+        // https://www.uservoice.com/o/javascript-sdk
+        //
+
+        // Set colors
+        UserVoice.push(['set', {
+          accent_color: '#448dd6',
+          trigger_color: 'white',
+          trigger_background_color: 'rgba(46, 49, 51, 0.6)'
+        }]);
+
+        // Identify the user and pass traits
+        // To enable, replace sample data with actual user traits and uncomment the line
+        UserVoice.push(['identify', {
+          //email:      'john.doe@example.com', // User’s email address
+          //name:       'John Doe', // User’s real name
+          //created_at: 1364406966, // Unix timestamp for the date the user signed up
+          //id:         123, // Optional: Unique id of the user (if set, this should not change)
+          //type:       'Owner', // Optional: segment your users by type
+          //account: {
+          //  id:           123, // Optional: associate multiple users with a single account
+          //  name:         'Acme, Co.', // Account name
+          //  created_at:   1364406966, // Unix timestamp for the date the account was created
+          //  monthly_rate: 9.99, // Decimal; monthly rate of the account
+          //  ltv:          1495.00, // Decimal; lifetime value of the account
+          //  plan:         'Enhanced' // Plan name for the account
+          //}
+        }]);
+
+        // Add default trigger to the bottom-right corner of the window:
+        UserVoice.push(['addTrigger', { mode: 'contact', trigger_position: 'bottom-right' }]);
+
+        // Or, use your own custom trigger:
+        //UserVoice.push(['addTrigger', '#id', { mode: 'contact' }]);
+
+        // Autoprompt for Satisfaction and SmartVote (only displayed under certain conditions)
+        UserVoice.push(['autoprompt', {}]);
+        </script>
+        
+    </body>
+</html>

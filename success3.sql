@@ -1,0 +1,1 @@
+SELECT *,COUNT(*) FROM tracklists tl INNER JOIN tracks tr ON tl.trackid = tr.trackid GROUP BY tl.albumid HAVING COUNT(tl.albumid) > 1;

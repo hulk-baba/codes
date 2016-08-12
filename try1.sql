@@ -1,0 +1,1 @@
+SELECT pd.plantFK AS murga, lc.name AS lname, p.name AS names, p.sunlight, pd.seeds, pd.locationFK FROM Plant p INNER JOIN planted pd ON pd.plantFK = p.plantid AND p.name = 'Tomato' INNER JOIN Location lc ON lc.name='North';

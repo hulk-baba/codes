@@ -1,0 +1,1 @@
+UPDATE planted SET locationFK = (SELECT Location.locationid FROM Location WHERE Location.name='North') WHERE planted.plantFK = (SELECT plantid FROM Plant WHERE Plant.name='Tomato');

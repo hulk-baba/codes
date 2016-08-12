@@ -1,0 +1,1 @@
+SELECT al.name AS album_name,tr.name AS track_name FROM albums al INNER JOIN tracklists tl ON tl.tracknum=2 AND tl.albumid = al.albumid INNER JOIN tracks tr ON tr.trackid = tl.trackid;

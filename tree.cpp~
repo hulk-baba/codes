@@ -1,0 +1,142 @@
+#include<iostream>
+#include<stdlib.h>
+#include<stdio.h>
+#include<bits/stdc++.h>
+using namespace std;
+
+struct node{
+	int data;
+	struct node *left, *right;
+
+};
+struct node *newNode(int data){
+	struct node *just_a_node = (struct node*)malloc(sizeof(struct node));
+	just_a_node->data = data;
+	just_a_node->left = NULL;
+	just_a_node->right = NULL;
+	return just_a_node;
+};
+void preorder_traversal(struct node *root){
+	if(root==NULL)
+		return;
+	preorder_traversal(root->left);
+	printf("%d",root->data);
+	preorder_traversal(root->right);
+}
+int height(struct node *root){
+	if(root == NULL)
+		return -1;
+	else if(root->left == NULL && root->right == NULL)
+		return 0;
+	else{
+		return max(1+height(root->left),1+height(root->right));
+	}
+}
+void print_at_level(struct node *root, int level){
+	if(root==NULL)
+	return;
+	else if(level == 0){
+		printf("%d",root->data);
+	}
+	else{
+		print_at_level(root->left,level-1);
+		print_at_level(root->right, level-1);
+	}
+}
+void bfs(struct node *root){
+	int h = height(root);
+	printf("height is %d\n",h);
+	for(int i=0;i<=h;i++){
+		print_at_level(root,i);
+	}
+}
+int diameter(struct node *root){
+	if(root == NULL)
+		return 0;
+	else {
+		int lheight = height(root->left)+1;
+		int rheight = height(root->right)+1;
+		return max(max(diameter(root->left), diameter(root->right)), lheight+rheight+1 );
+	}
+}
+void inorder_traversal(struct node *root){
+	stack<struct node *> s;
+	struct node *current = root;
+	while(1){
+		if(!s.empty() && current == NULL){
+			printf("%d",s.top()->data);
+			current = s.top()->right;
+			s.pop();
+		}
+		else if(current == NULL)
+			return;
+		else if(current !=NULL){
+			s.push(current);
+			current =  current->left;
+		}
+
+	}
+}
+void inorder_traversal_without_stack(struct node *root){
+	struct node *current = root, *pre;
+	if(root == NULL)
+		return;
+	while(current != NULL){
+		if(current->left == NULL){
+			printf("%d",current->data);
+			current = current->right;
+		}
+		else{
+			pre = current->left;
+			while(pre->right!=NULL && pre->right!=current){
+				pre = pre->right;
+			}
+			if(pre->right == NULL){
+				pre->right = current;
+				current = current->left;
+			}
+			else{
+				pre->right = NULL;
+				printf("%d",current->data);
+				current = current->right;
+			}
+		}
+	}
+}
+int search(string inorder,int st, int en, char val){
+	for(int i=st;i<=en;i++){
+		if(inorder[i]==val){
+			return i;
+		}
+	}
+} 
+//string inorder, string preorder;
+/*void build_tree(string inorder, string preorder, int st, int en){
+	if(st<en)
+	return;
+	else if(st==en)
+	return tnode;
+	struct node *tnode;
+}*/
+	
+int main(){
+	struct node *root = newNode(1);
+	root->left = newNode(2);
+	root->right = newNode(3);
+	root->left->left = newNode(4);
+    	root->left->right = newNode(5);
+	printf("preorder traversal\n");
+	preorder_traversal(root);printf("\n");
+	printf("Level Order Traversal\n");
+	bfs(root);printf("\n");
+	printf("Diameter of treee is \n");
+	printf("%d \n",diameter(root));
+	printf("inorder traversal without recursion\n");
+	inorder_traversal(root);printf("\n");
+	printf("inorder traversal without recursion and stack\n");
+	inorder_traversal_without_stack(root);
+	string inorder,preorder;
+	cin>>inorder>>preorder;
+	void build_tree(string inorder,string preorder,0, (int)size(preorder));
+	return 0;
+}

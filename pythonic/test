@@ -1,0 +1,12 @@
+from PIL import Image
+# import ImageEnhance
+# from pytesser import *
+from urllib import urlretrieve
+
+def get(link):
+    urlretrieve(link,'temp.png');
+
+get('http://www.irctc.com/eticketing/captchaImage');
+im = Image.open("temp.png");
+nx, ny = im.size;
+print nx,ny;

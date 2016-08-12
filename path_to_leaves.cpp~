@@ -1,0 +1,110 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+#define sz(c)  (int)c.size();
+struct node{
+	char data;
+	string path;
+	node *left;
+	node *right;
+};
+
+node *create(char data){
+	node *newNode = new node();
+	newNode->data = data;
+	newNode->path= data ;
+	newNode->left = newNode->right = NULL;
+	return newNode;
+}
+
+node *insert(node *root, char data){
+	node *NN = create(data);
+	if(root==NULL)
+		return root = NN;
+	else if(data <= root->data){
+		root->left = insert(root->left,data);
+	}
+	else {
+		root->right = insert(root->right,data);
+	}
+	return root;
+}
+
+void preorder(node *root){
+	if(root == NULL)
+		return;
+	cout<<root->data<<" ";
+	preorder(root->left);
+	preorder(root->right);
+}
+
+//path  to leaves
+void dfs(node *root){
+	stack<node*>s;
+	if(root == NULL)
+		return;
+	s.push(root);
+	while(!s.empty()){
+		node *top = s.top();
+		s.pop();
+		if(top->left){
+			top->left->path = top->path +  top->left->path;
+			s.push(top->left);
+		}
+		if(top->right){
+			top->right->path = top->path + top->right->path;
+			s.push(top->right);
+		}
+		if(top->right==NULL && top->left==NULL)
+			cout<<top->path<<"\n";
+	}
+	 
+}
+
+string search(node *root, char val){
+	if(root == NULL)
+		return ;
+	if(root->data == val)
+		return root->path;
+	if(val < root->data){
+		return search(root->left,val);
+	}
+	else
+		return search(root->right,val);
+}
+int main(){
+	node *root = NULL;
+	root = insert(root,'3');
+	root = insert(root,'0');
+	root = insert(root,'8');
+	root = insert(root,'2');
+	root = insert(root,'1');
+	root = insert(root,'4');
+	root = insert(root,'9');
+	root = insert(root,'5');
+	root = insert(root,'6');
+	root = insert(root,'7');
+	preorder(root);
+	cout<<"\n";
+	dfs(root);
+	char u,v;
+	cin>>u>>v;
+	string a = search(root,u);
+	cout<<"a -> "<<a<<endl;
+	string b = search(root,v);
+	cout<<"b -> "<<b<<endl;
+	int n = a.length();
+	cout<<n<<endl;
+	int m = b.length();
+	cout<<m<<endl;
+	for(int i=n-1;i>=0;i--){
+		for(int j=m-1;j>=0;j--){
+			if(a[i] == b[j]){
+			 cout<<a[i]<<"\n";
+			 return 0;
+			}
+				
+		}
+	}
+	
+}

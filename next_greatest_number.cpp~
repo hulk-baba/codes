@@ -1,0 +1,44 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+string  next(string str){
+	int n = (int)str.length();
+	int i;
+	for(i=n-1;i>=1;i--){
+		if(str[i]<=str[i-1])
+		continue;
+		else
+		break;	
+	}
+	//string part2 = str.substr(i);
+	//string part1 = str.substr(0,i);
+	//cout<<part1<<" "<<part2;
+	char ch = str[i-1];
+	int pos=i;
+	for(int i=n-1;i>=pos;i--){	
+		if(str[i] > ch){
+			char tmp = str[i];
+			str[i] = ch;
+			str[pos-1] = tmp;
+			break;
+		}	
+	}
+	sort(str.begin()+pos,str.end());
+	return str;
+}
+int main(){
+	int t;
+	cin>>t;
+	while(t--){
+		string str;
+		cin>>str;
+		string ans = next(str);
+		//cout<<ans<<"\n";
+		if(ans!=str)
+		cout<<ans<<"\n";
+		else
+		cout<<"not possible\n";
+	}
+}
+	
+

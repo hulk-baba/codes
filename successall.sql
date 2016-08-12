@@ -1,0 +1,1 @@
+SELECT  *,CASE WHEN tl.tracknum=2 AND THEN tl.tracknum ELSE 'NULL' END FROM albums al INNER JOIN tracklists tl ON tl.albumid = al.albumid  INNER JOIN tracks tr ON tr.trackid = tl.trackid ;
